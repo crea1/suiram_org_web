@@ -105,11 +105,14 @@ footer                  { background-color: #000; height: 400px; color: #f0f0f0;
 #navigation             { float:right; margin: 0 2px; position: relative;}
 #navigation li          { float: left; height: 91px; width: 80px; text-align: center; }
 #navigation li:hover    { border-bottom: 3px #2B8DC0 solid; }
-.navigation-active       { border-bottom: 3px #195373 solid; }
+.navigation-active      { border-bottom: 3px #195373 solid; }
 #navigation li a        { height: 100%; display: block; text-decoration: none; white-space: nowrap; color: #2c2c2c;}
 
-#content { max-width: 960px; margin: 0 auto; }
+#content                { max-width: 960px; margin: 0 auto; }
+.content-section        { padding-bottom: 30px; }
 
+a                       { color: #195373; }
+a:hover                 { color: #2B8DC0; }
 
 
 #footer-info            { text-align: center; padding-top: 200px; }
