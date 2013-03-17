@@ -94,6 +94,7 @@ textarea {
    ========================================================================== */
 .boxshadow              { -webkit-box-shadow: 0px 0px 3px 2px #bbbbbb; box-shadow:  0px 0px 3px 2px #bbbbbb; }
 
+h1                      { color: #2c2c2c; }
 body                    { background-color: #f0f0f0; padding-top: 111px; }
 footer                  { background-color: #000; height: 400px; color: #f0f0f0; }
 #menu-container-top     { height:91px; position: fixed; top: 0; width: 100%; background-color: #fff; opacity: 0.9; border-bottom: 1px ridge #CCCCCC; z-index: 9999; }
