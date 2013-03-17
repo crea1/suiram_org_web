@@ -7,7 +7,7 @@
 
 # THANKS
 
-    <name>
+    Icons -  http://simpleicons.org/
 
 # TECHNOLOGY COLOPHON
 
@@ -15,14 +15,14 @@
     Normalize.css, jQuery, Modernizr
 
 # CASTLE
-                                       _____________
-                                      |             |
-                                      | suiram.org  |
-                                      |_____________|
-                                      |
-                                      |
-                                      |
-                                      |
+                                  _____________
+                                 |             |
+                                 | suiram.org  |
+                                 |_____________|
+                                 |
+                                 |
+                                 |
+                                 |
 ###   ###   ###           ###   ###   ###           ###   ###   ###
 ###   ###   ###           ###   ###   ###           ###   ###   ###
  #############             #############             #############
