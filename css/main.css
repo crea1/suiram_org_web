@@ -107,7 +107,7 @@ footer                  { background-color: #000; height: 400px; color: #f0f0f0;
 .navigation-active       { border-bottom: 3px #195373 solid; }
 #navigation li a        { height: 100%; display: block; text-decoration: none; white-space: nowrap; color: #2c2c2c;}
 
-#content { width: 960px; margin: 0 auto; }
+#content { max-width: 960px; margin: 0 auto; }
 
 
 
