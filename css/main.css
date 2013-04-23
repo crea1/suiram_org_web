@@ -96,7 +96,7 @@ textarea {
 
 h1                      { color: #2c2c2c; }
 body                    { background-color: #f0f0f0; padding-top: 111px; }
-footer                  { background-color: #000; height: 400px; color: #f0f0f0; }
+footer                  { background-color: #111; height: 35em; color: #f0f0f0; }
 #menu-container-top     { height:91px; position: fixed; top: 0; width: 100%; background-color: #fff; opacity: 0.9; border-bottom: 1px ridge #CCCCCC; z-index: 9999; }
 #menu-container-margin  { max-width: 960px; margin: 0 auto; height: 100%; }
 #menu-header            { float: left; margin-left: 11px; margin-top: 45px;padding: 0px; font-family: Georgia, Times, "Times New Roman", serif; }
