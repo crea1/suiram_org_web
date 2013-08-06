@@ -1,6 +1,7 @@
 jQuery(document).ready(function() {
     // Navigation scrollTo
     jQuery("nav ul li a").click( function(event) {
+	event.preventDefault();
         jQuery.scrollTo(
             jQuery(this).attr("href"), 700, {offset:-100}
         );
