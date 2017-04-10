@@ -1,9 +1,16 @@
-var HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
  
 var HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
   template: __dirname + '/src/index.html',
   filename: 'index.html'
+});
+
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+
+const extractSass = new ExtractTextPlugin({
+    filename: "[name].css",
+    disable: process.env.NODE_ENV === "development"
 });
 
 module.exports = {
@@ -24,6 +31,19 @@ module.exports = {
           'babel-loader',
         ],
       },
+      {
+        test: /\.scss$/,
+        use: extractSass.extract({
+                use: [{
+                    loader: "css-loader"
+                }, {
+                    loader: "sass-loader"
+                }]
+		//,
+                // use style-loader in development
+                //fallback: "style-loader"
+            }),
+      }
     ],
   },
   resolve: {
@@ -31,5 +51,5 @@ module.exports = {
       path.join(__dirname, 'node_modules'),
     ],
   },
-  plugins: [HTMLWebpackPluginConfig]
+  plugins: [HTMLWebpackPluginConfig, extractSass]
 };
