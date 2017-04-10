@@ -1,6 +1,6 @@
 suiram-org-web 
 =====================
-[![Build Status](https://travis-ci.org/crea1/suiram_org_web.svg?branch=master)](https://travis-ci.org/crea1/suiram_org_web)
+[![Build Status](https://travis-ci.org/crea1/suiram_org_web.svg?branch=develop)](https://travis-ci.org/crea1/suiram_org_web)
 
 
 homepage derpaderp
