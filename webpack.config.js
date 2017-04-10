@@ -43,7 +43,11 @@ module.exports = {
                 // use style-loader in development
                 //fallback: "style-loader"
             }),
-      }
+      },
+        {
+            test: /\.(ttf|eot|svg|woff2|woff)$/,
+            use : 'file-loader'
+        }
     ],
   },
   resolve: {
