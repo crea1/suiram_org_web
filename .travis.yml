@@ -12,3 +12,10 @@ before_script :
 script        :
   - "npm install"
   - "npm run compile"
+
+deploy :
+  provider: script
+  skip_cleanup: true
+  script: scripts/deploy.sh
+  on:
+    branch: develop
