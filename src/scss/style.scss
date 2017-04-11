@@ -9,6 +9,13 @@ body {
     color: $text-color;
 }
 h1 {
-    color: SlateBlue;
+    color: #333;
 }
 
+#welcome {
+  height: 100vh;
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

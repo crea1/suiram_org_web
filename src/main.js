@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Counter from './Counter';
+import Counter from './components/Counter';
+import Welcome from "./components/Welcome";
 
-import './scss/style.scss'
+import './scss/style.scss';
+
 
 document.addEventListener('DOMContentLoaded', function () {
     ReactDOM.render(
