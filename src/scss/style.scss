@@ -1,5 +1,13 @@
-$font-stack: 100% Helvetica, sans-serif;
+$font-stack: 100% 'Open Sans', sans-serif;
 $text-color: #222;
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(./fonts/open-sans-normal-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
 
 body {
     width: 100%;
@@ -17,4 +25,5 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 4em;
 }
