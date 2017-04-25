@@ -1,14 +1,18 @@
 const path = require('path');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
- 
-var HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+const CopyImages = new CopyWebpackPlugin([
+    { from: __dirname + '/src/images', to: 'images' }
+]);
+
+const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
   template: __dirname + '/src/index.html',
   filename: 'index.html'
 });
 
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
-
-const extractSass = new ExtractTextPlugin({
+const ExtractSass = new ExtractTextPlugin({
     filename: "[name].css",
     disable: process.env.NODE_ENV === "development"
 });
@@ -33,7 +37,7 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use: extractSass.extract({
+        use: ExtractSass.extract({
                 use: [{
                     loader: "css-loader"
                 }, {
@@ -45,9 +49,9 @@ module.exports = {
             }),
       },
         {
-            test: /\.(ttf|eot|svg|woff2|woff)$/,
+            test: /\.(ttf|eot|woff2|woff)$/,
             use : 'file-loader'
-        }
+        },
     ],
   },
   resolve: {
@@ -55,5 +59,5 @@ module.exports = {
       path.join(__dirname, 'node_modules'),
     ],
   },
-  plugins: [HTMLWebpackPluginConfig, extractSass]
+  plugins: [CopyImages, HTMLWebpackPluginConfig, ExtractSass]
 };
