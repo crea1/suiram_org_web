@@ -1,10 +1,10 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
+const React = require('react');
+const ReactDOM = require('react-dom');
 
 //const logo = require('../images/logo.svg');
 
 
-var Welcome = React.createClass({
+const Welcome = React.createClass({
     render: function () {
         return (
             <div id="welcome-stuff">
