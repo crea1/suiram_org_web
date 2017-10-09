@@ -56,10 +56,23 @@ section {
   text-align: center;
 }
 
-#welcome-stuff h1 {
-
-}
-
 #welcome-stuff img {
   height: 100px;
+}
+
+#about {
+  background-color: #F6F6F6;
+  text-align: center;
+  font-family: 'Open Sans Light', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#about h2 {
+  font-size: 2vw;
+}
+
+#about .center-everything {
+
 }
