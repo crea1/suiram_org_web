@@ -1,11 +1,7 @@
 const React = require('react');
-const ReactDOM = require('react-dom');
 
-//const logo = require('../images/logo.svg');
-
-
-const Welcome = React.createClass({
-    render: function () {
+export class Welcome extends React.Component {
+    render() {
         return (
             <div id="welcome-stuff">
                 <div className="welcome-hi">Hi there, I'm</div>
@@ -14,9 +10,4 @@ const Welcome = React.createClass({
             </div>
         );
     }
-});
-
-ReactDOM.render(
-    <Welcome />,
-    document.getElementById('welcome')
-);
+}

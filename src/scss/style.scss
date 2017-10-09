@@ -27,10 +27,14 @@ body {
     color: $text-color;
 }
 
+section {
+  min-height: 100vh;
+}
+
 #welcome {
   height: 100vh;
   color: #fdffea;
-  background: #43c6ac; /* fallback for old browsers */
+  background: #43c6ac;
   display: flex;
   justify-content: center;
   align-items: center;
