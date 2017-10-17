@@ -87,10 +87,11 @@ section {
     display: block;
     top: 30px;
     left: 30px;
-    background-color: aquamarine;
+    background-color: #43c6ac + 40;
+    cursor: pointer;
 
     &:hover {
-      background-color: aquamarine + 20;
+      background-color: #43c6ac + 50;
     }
   }
 
@@ -102,19 +103,35 @@ section {
       height: 2px;
       background-color: #43c6ac;
       margin: 5px 10px;
+      transition: 0.15s;
     }
 
     .burger-bun-top {
       @extend .burger;
       margin-top: 12px;
+
+      &.burger-clicked {
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+        transform: rotate(-45deg) translate(-5px, 5px) ;
+      }
     }
 
     .burger-filling {
       @extend .burger;
+
+      &.burger-clicked {
+        opacity: 0;
+        transition: 0s;
+      }
     }
 
     .burger-bun-bot {
       @extend .burger;
+
+      &.burger-clicked {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+        transform: rotate(45deg) translate(-5px, -5px) ;
+      }
     }
   }
 
