@@ -76,3 +76,48 @@ section {
 #about .center-everything {
 
 }
+
+
+// Menu stuff
+#menu {
+  .menu-button {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    display: block;
+    top: 30px;
+    left: 30px;
+    background-color: aquamarine;
+
+    &:hover {
+      background-color: aquamarine + 20;
+    }
+  }
+
+  .burger-container {
+
+    .burger {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background-color: #43c6ac;
+      margin: 5px 10px;
+    }
+
+    .burger-bun-top {
+      @extend .burger;
+      margin-top: 12px;
+    }
+
+    .burger-filling {
+      @extend .burger;
+    }
+
+    .burger-bun-bot {
+      @extend .burger;
+    }
+  }
+
+
+}
+// Menu end
