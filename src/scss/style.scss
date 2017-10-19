@@ -80,19 +80,28 @@ section {
 
 // Menu stuff
 #menu {
+  $drawerWidth: 300px;
+  $burgerLeftDistance: 15px;
+
   .menu-button {
     height: 40px;
     width: 40px;
-    position: absolute;
+    position: fixed;
     display: block;
-    top: 30px;
-    left: 30px;
+    top: 15px;
+    left: $burgerLeftDistance;
     background-color: #43c6ac + 40;
     cursor: pointer;
     z-index: 100;
+    transition: 0.2s;
 
     &:hover {
       background-color: #43c6ac + 50;
+    }
+
+    &.menu-open {
+      transition: 0.2s;
+      left: $drawerWidth + $burgerLeftDistance;
     }
   }
 
@@ -137,14 +146,16 @@ section {
   }
 
   .menu-drawer {
-    $width: 300px;
-    position: absolute;
+    position: fixed;
     display: block;
-    width: $width;
-    left: $width * -1;
+    width: $drawerWidth;
+    left: $drawerWidth * -1;
     height: 100vh;
-    background-color: #F6F6F6;
+    background-color: #282828;
+    color: #F6F6F6;
     transition: 0.2s;
+    text-align: center;
+    padding-top: 4vw;
 
     &.menu-open {
       left: 0;

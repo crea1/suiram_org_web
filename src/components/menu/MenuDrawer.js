@@ -5,7 +5,9 @@ export class MenuDrawer extends React.Component {
     render() {
         return (
             <div className={"menu-drawer " + (this.props.drawerOpen ? "menu-open" : "")}>
-                a menu should be here
+                <h1 style={{fontSize: '2vw'}}>menu</h1>
+                <div>Home</div>
+                <div>About</div>
             </div>
         );
     }

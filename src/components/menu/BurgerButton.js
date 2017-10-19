@@ -13,7 +13,7 @@ export class BurgerButton extends React.Component {
 
     render() {
         return (
-            <div className={"menu-button"}
+            <div className={"menu-button " + (this.state.isActive ? " menu-open" :"")}
                  onClick={this.handleClick}>
                 <div className="burger-icon">
                     <div className="burger-container">
