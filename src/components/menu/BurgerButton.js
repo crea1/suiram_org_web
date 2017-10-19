@@ -32,5 +32,6 @@ export class BurgerButton extends React.Component {
                 isActive: !prevState.isActive
             })
         );
+        this.props.clickHandler();
     }
 }

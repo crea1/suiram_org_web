@@ -89,6 +89,7 @@ section {
     left: 30px;
     background-color: #43c6ac + 40;
     cursor: pointer;
+    z-index: 100;
 
     &:hover {
       background-color: #43c6ac + 50;
@@ -132,6 +133,21 @@ section {
         -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
         transform: rotate(45deg) translate(-5px, -5px) ;
       }
+    }
+  }
+
+  .menu-drawer {
+    $width: 300px;
+    position: absolute;
+    display: block;
+    width: $width;
+    left: $width * -1;
+    height: 100vh;
+    background-color: #F6F6F6;
+    transition: 0.2s;
+
+    &.menu-open {
+      left: 0;
     }
   }
 
