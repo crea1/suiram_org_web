@@ -81,26 +81,29 @@ section {
 // Menu stuff
 #menu {
   $drawerWidth: 300px;
-  $burgerLeftDistance: 15px;
+  $burgerLeftDistance: 0px;
 
   .menu-button {
-    height: 40px;
-    width: 40px;
+    height: 50px;
+    width: 50px;
     position: fixed;
     display: block;
     top: 15px;
     left: $burgerLeftDistance;
-    background-color: #43c6ac + 40;
+    background-color: rgba(40, 40, 40, 0.4);
+    border-radius: 0 15px 15px 0;
     cursor: pointer;
     z-index: 100;
     transition: 0.2s;
+    transition-delay: 0.3s;
 
     &:hover {
-      background-color: #43c6ac + 50;
+      background-color: rgba(40, 40, 40, 0.5);
     }
 
     &.menu-open {
       transition: 0.2s;
+      transition-delay: 0.3s;
       left: $drawerWidth + $burgerLeftDistance;
     }
   }
@@ -111,14 +114,14 @@ section {
       display: block;
       width: 20px;
       height: 2px;
-      background-color: #43c6ac;
+      background-color: #eeeeee;
       margin: 5px 10px;
-      transition: 0.15s;
+      transition: 0.3s;
     }
 
     .burger-bun-top {
       @extend .burger;
-      margin-top: 12px;
+      margin-top: 17px;
 
       &.burger-clicked {
         -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
@@ -154,6 +157,7 @@ section {
     background-color: #282828;
     color: #F6F6F6;
     transition: 0.2s;
+    transition-delay: 0.3s;
     text-align: center;
     padding-top: 4vw;
 
@@ -176,7 +180,5 @@ section {
     }
 
   }
-
-
 }
 // Menu end
