@@ -76,3 +76,109 @@ section {
 #about .center-everything {
 
 }
+
+
+// Menu stuff
+#menu {
+  $drawerWidth: 300px;
+  $burgerLeftDistance: 0px;
+
+  .menu-button {
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    display: block;
+    top: 15px;
+    left: $burgerLeftDistance;
+    background-color: rgba(40, 40, 40, 0.4);
+    border-radius: 0 15px 15px 0;
+    cursor: pointer;
+    z-index: 100;
+    transition: 0.2s;
+    transition-delay: 0.3s;
+
+    &:hover {
+      background-color: rgba(40, 40, 40, 0.5);
+    }
+
+    &.menu-open {
+      transition: 0.2s;
+      transition-delay: 0.3s;
+      left: $drawerWidth + $burgerLeftDistance;
+    }
+  }
+
+  .burger-container {
+
+    .burger {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background-color: #eeeeee;
+      margin: 5px 10px;
+      transition: 0.3s;
+    }
+
+    .burger-bun-top {
+      @extend .burger;
+      margin-top: 17px;
+
+      &.burger-clicked {
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+        transform: rotate(-45deg) translate(-5px, 5px) ;
+      }
+    }
+
+    .burger-filling {
+      @extend .burger;
+
+      &.burger-clicked {
+        opacity: 0;
+        transition: 0s;
+      }
+    }
+
+    .burger-bun-bot {
+      @extend .burger;
+
+      &.burger-clicked {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+        transform: rotate(45deg) translate(-5px, -5px) ;
+      }
+    }
+  }
+
+  .menu-drawer {
+    position: fixed;
+    display: block;
+    width: $drawerWidth;
+    left: $drawerWidth * -1;
+    height: 100vh;
+    background-color: #282828;
+    color: #F6F6F6;
+    transition: 0.2s;
+    transition-delay: 0.3s;
+    text-align: center;
+    padding-top: 4vw;
+
+    &.menu-open {
+      left: 0;
+    }
+  }
+
+  .menu-link {
+    width: 100%;
+    a {
+      width: 100%;
+      color: #F6F6F6;
+      text-decoration: none;
+      display: block;
+      padding: 15px 0;
+    }
+    &:hover {
+      background-color: #383838;
+    }
+
+  }
+}
+// Menu end
