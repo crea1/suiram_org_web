@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {Menu} from "./menu/Menu";
+import Menu from "./menu/Menu";
 import {Welcome} from "./Welcome";
 import {About} from "./About";
 import {connect} from "react-redux";

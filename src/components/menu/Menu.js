@@ -1,16 +1,20 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import BurgerButton from "./BurgerButton";
 import MenuDrawer from "./MenuDrawer";
 
-export class Menu extends React.Component {
+const Menu = ({burgerClicked, drawerOpen}) => {
+    return (
+        <nav id="menu">
+            <BurgerButton clickHandler={burgerClicked} isActive={drawerOpen}/>
+            <MenuDrawer drawerOpen={drawerOpen}/>
+        </nav>
+    );
+};
 
-    render() {
-        return (
-            <nav id="menu">
-                <BurgerButton clickHandler={this.props.burgerClicked} isActive={this.props.drawerOpen}/>
-                <MenuDrawer drawerOpen={this.props.drawerOpen}/>
-            </nav>
-        );
-    }
+Menu.propTypes = {
+    burgerClicked: PropTypes.func,
+    isActive: PropTypes.bool,
+};
 
-}
+export default Menu;
