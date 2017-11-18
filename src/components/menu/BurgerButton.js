@@ -1,6 +1,6 @@
 import React from "react";
 
-export class BurgerButton extends React.Component {
+export default class BurgerButton extends React.Component {
 
     constructor(props) {
         super(props);

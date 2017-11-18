@@ -1,7 +1,7 @@
 import React from "react";
 import {MenuLink} from "./MenuLink";
 
-export class MenuDrawer extends React.Component {
+export default class MenuDrawer extends React.Component {
 
     render() {
         return (
